@@ -30,14 +30,14 @@ public class Tictactoe
 
 	public static void displayGame(char show[])
 	{
-
+		int count=0;
 		for(int k=1;k<=3;k++)
 		{
 		 for(int i=1;i<=show.length-1;i++)
 		 {
-			System.out.println(show[i]);
+			count+=count;
+			System.out.println(show[count]);
 		 }
-		        System.out.println();
 		}
 	}
 }
