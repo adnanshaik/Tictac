@@ -30,8 +30,8 @@ public class TicTac
 
 public static void main(String args[])
 {
-         static String User=0;
-         static String Bot=0;
+         String User;
+         String Bot;
         char[] board=createBoard();
         String Answer=userData();
 
