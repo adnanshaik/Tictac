@@ -2,7 +2,7 @@
 import java.util.*;
 import java.lang.*;
 
-public class TicTac
+public class Tictactoe
 {
 
  public static  char[] createBoard()
@@ -18,20 +18,34 @@ public class TicTac
         public static String userData()
         {
 
-                Scanner sc = new Scanner(System.in);
-                System.out.println("entr x or o");
+               Scanner sc = new Scanner(System.in);
+               System.out.println("entr x or o");
 
                 String User=sc.nextLine();
                 if(User=="X")
                 {
                  return User;
                 }
-   }
+        }
+
+	public static void displayGame(char show[])
+	{
+
+		for(int k=1;k<=3;k++)
+		{
+		 for(int i=1;i<=show.length-1;i++)
+		 {
+			System.out.println(show[i]);
+		 }
+		        System.out.println();
+		}
+	}
+}
 
 public static void main(String args[])
 {
-         static String User=0;
-         static String Bot=0;
+        String User=null;
+        String Bot=null;
         char[] board=createBoard();
         String Answer=userData();
 
@@ -43,9 +57,11 @@ public static void main(String args[])
         else
         {
                 Bot="X";
-                User="O"
+                User="O";
         }
-        System.out.println(Answer);
+
+      	displayGame(board);
+
 }
 
 }
